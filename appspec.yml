@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-southeast-1:108317692498:task-definition/movie-info-service-TD:9"
+        LoadBalancerInfo:
+          ContainerName: "movie-info-image"
+          ContainerPort: "8082"
+        PlatformVersion: "LATEST"
