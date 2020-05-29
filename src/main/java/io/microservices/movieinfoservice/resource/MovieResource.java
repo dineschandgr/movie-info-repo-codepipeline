@@ -23,5 +23,11 @@ public class MovieResource {
 		logger.info("inside getMovieInfo");
 		return movieInfoRepository.findById(movieId).orElse(null);
 	}
+	
+	@RequestMapping("/welcome")
+	public String geHello(){
+		logger.info("inside geHello");
+		return "hi this is a new deployment";
+	}
 
 }
